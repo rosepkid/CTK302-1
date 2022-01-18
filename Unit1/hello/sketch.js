@@ -4,7 +4,7 @@ function setup() {
 }
 
 function draw() {
-  background('red') ;
+  background('yellow') ;
   fill('white') ;
   textSize(32) ;
   text("SHIRTS!", 250, 250) ;
