@@ -46,7 +46,7 @@ function draw() {
 }
 
 function mouseReleased() {
-  state = (state + 1) % 5 ;
+  state = (state + 1) % 6 ;
   song1.pause() ;
   song2.pause() ;
   song3.pause() ;
