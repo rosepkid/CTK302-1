@@ -96,6 +96,13 @@ function draw() {
   text("y = " + y, 25, 170);
   text("z = " + z, 25, 190);
 
+  // if my acceleration got kinda big, clear array and respawn
+  if (x > 5) {
+    cars = []; // clear the array first
+    for (var i = 0; i < 40; i++) {
+      cars.push(new Car());
+    }
+  }
 
 }
 
@@ -138,7 +145,7 @@ function Car() {
   this.r = random(255);
   this.g = random(255);
   this.b = random(255);
-  this.a = random(255);  // alpha opacity value for fill!
+  this.a = random(255); // alpha opacity value for fill!
 
 
   // methods
@@ -148,7 +155,7 @@ function Car() {
     fill(this.r, this.g, this.b, this.a);
     ellipse(this.pos.x - 50, this.pos.y, 50, 50);
     ellipse(this.pos.x + 50, this.pos.y, 50, 50);
-    rect(this.pos.x + 17, this.pos.y - 30, 80, 60) ;
+    rect(this.pos.x + 17, this.pos.y - 30, 80, 60);
 
   }
 
